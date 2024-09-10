@@ -1,0 +1,514 @@
+:root {
+    --gray-dark: #595653;
+    --black: #313131;
+    --balck-button: #1F1F1F;
+    --white: #fff;
+    --red: #F54932;
+    --blue: #3057A2;
+    --brown: #E9DED4;
+    --gray: #D0D0D0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    padding: 0 72px;
+}
+
+body section:first-child {
+    background-image: url(assets/main.png);
+    background-size: cover;
+    padding: 26px 72px;
+}
+
+header h2 {
+    font-family: "Golos Text";
+    font-size: 16.65px;
+    font-weight: 700;
+    line-height: 17.98px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--gray-dark);
+}
+
+header {
+    margin-bottom: 62px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    width: 70px;
+}
+
+main {
+    width: 542px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px 40px;
+
+    margin-bottom: 130px;
+}
+
+h1 {
+    font-family: 'Merriweather';
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 66px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+h1 span:nth-child(2) {
+    margin: 0 0 0 91px;
+}
+
+h1 span:nth-child(3) {
+    margin: 0 0 0 33px;
+}
+
+p {
+    font-family: 'Golos Text';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.4px;
+    text-align: center;
+}
+
+button {
+    width: 263px;
+    height: 72px;
+    padding: 0 49px;
+    border-radius: 66px;
+
+    font-family: 'Golos Text';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.8px;
+    text-align: center;
+
+    border: 2px solid var(--balck-button)
+}
+
+button.black {
+    color: var(--white);
+    background-color: var(--balck-button);
+}
+
+button.white {
+    color: var(--black);
+    background-color: transparent;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+header.row {
+    gap: 6px;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.ticker {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+
+    background: var(--red);
+    color: var(--white);
+    font-family: 'Merriweather';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 24.2px;
+    text-transform: uppercase;
+
+    height: 60px;
+    overflow: hidden;
+}
+
+.ticker__in {
+    display: flex;
+    width: fit-content;
+    animation: ticker 10s linear infinite;
+    -webkit-transform-style: preserve-3d;
+    text-align: center;
+
+    height: 100%;
+}
+
+.ticker__item {
+    padding: 0 6px;
+    white-space: nowrap;
+    -webkit-backface-visibility: hidden;
+    height: 100%;
+    align-self: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section:nth-child(2) {
+    margin-top: 140px;
+    margin-bottom: 200px;
+}
+
+h2 {
+    font-family: 'Merriweather';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48.6px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.row.chess {
+    gap: 64px;
+    align-items: center;
+}
+
+.red {
+    font-family: 'Merriweather';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48.6px;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--red);
+}
+
+.chess-play {
+    width: 394px;
+    height: 250px;
+}
+
+.man {
+    width: 528px;
+    /* height: 527px; */
+}
+
+.row.man-table {
+    padding-top: 64px;
+    gap: 44px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    padding: 60px 0 48px 0;
+
+    width: 704px;
+}
+
+tr td:first-child {
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: var(--gray);
+
+    width: calc(290px + 16px);
+    padding: 16px 16px 16px 0;
+
+    border-bottom: 2px solid var(--gray);
+    border-right: 2px solid var(--gray);
+}
+
+table tr:first-child td {
+    padding-top: 0;
+}
+
+tr td:last-child {
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: var(--black);
+
+    width: 398px;
+    padding: 16px 0 16px 16px;
+    border-bottom: 2px solid var(--gray);
+}
+
+del {
+    text-decoration: line-through;
+    text-decoration-color: var(--red);
+    padding-right: 12px;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.blue {
+    color: var(--blue);
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+h3 {
+    font-family: Merriweather;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 64.8px;
+    text-align: left;
+    color: var(--black);
+    padding-bottom: 54px;
+    max-width: 705px;
+}
+
+h3>span.blue {
+    width: 280px;
+    position: absolute;
+    margin: 11px 0 0 20px;
+    line-height: 24px;
+}
+
+.blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    background-image: url(assets/paper.png);
+    padding: 20px;
+}
+
+.block p {
+    color: var(--black);
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+}
+
+.number {
+    background-color: var(--white);
+    border-radius: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+}
+
+.number p {
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+
+    padding: 12px 11px;
+}
+
+.block.third {
+    grid-row: span 2;
+}
+
+.block.seventh {
+    grid-column: span 2;
+}
+
+.block.seventh p {
+    max-width: 446px;
+}
+
+.plane {
+    position: absolute;
+    right: 0;
+    
+}
+
+.row.nav {
+    justify-content: space-between;
+    padding: 60px;
+}
+
+.row.nav h3 {
+    padding: 0;
+}
+
+nav.row {
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+nav button {
+    width: 44px;
+    height: 44px;
+    background-color: var(--black);
+    border-radius: 100%;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav p span:last-child {
+    opacity: 60%;
+}
+
+button.blue {
+    background-color: transparent;
+    width: 113px;
+    height: 35px;
+    top: 427px;
+    padding: 0 12px;
+    gap: 10px;
+    border-radius: 62px;
+    border: 1px solid var(--blue);
+
+    font-family: 'Golos Text';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: left;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#cardsContainer {
+    display: flex;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.row.cards {
+    justify-content: space-between;
+    overflow: hidden;
+    padding-bottom: 140px;
+}
+
+.card {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.slide-left {
+    animation-name: slideInLeft;
+}
+
+.slide-right {
+    animation-name: slideInRight;
+}
+
+.card img {
+    width: 320px;
+    height: 320px;
+    padding-bottom: 28px;
+}
+
+.card h4 {
+    font-family: 'Golos Text';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.8px;
+    text-align: left;
+    color: var(--black);
+
+    width: inherit;
+}
+
+.card p {
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: var(--black);
+    opacity: 60%;
+
+    padding: 6px 0 20px 0;
+    width: inherit;
+}
+
+footer {
+    background-color: var(--brown);
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+footer p {
+    font-family: 'Golos Text';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    color: var(--black);
+    opacity: 60%;
+
+    padding: 40px 0 72px 0;
+    max-width: 1222px;
+}
